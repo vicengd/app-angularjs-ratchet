@@ -1,0 +1,19 @@
+<header class="bar-title" id="cabecera">
+	<button class="button" id="toggle-left" ng-click="showmenu()">Menu</button>
+    <h1 class="title">Listado de tareas</h1>
+</header>
+<div class="content" ng-controller="EventCtrl">
+	<div>&nbsp;</div>
+	<input type="search" placeholder="buscar..." ng-model="query">
+	<div>&nbsp;</div>
+	<a href="#/tarea/addtarea" class="button">Agregar tarea</a>
+	<div>&nbsp;</div>
+	<ul class="list">
+	  <li ng-repeat='tarea in tareas | filter:query'>
+	    <a ng-href="#/tarea/{{tarea.id}}" data-transition="slide-in" ng-click="$emit('MyEvent')">
+	      {{tarea.titulo}}
+	      <span class="chevron"></span>
+	    </a>
+	  </li>
+	</ul>
+</div>

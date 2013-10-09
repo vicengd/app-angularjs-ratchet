@@ -1,0 +1,16 @@
+<header class="bar-title" id="cabecera" ng-controller="EventCtrl">
+    <a class="button-prev" href="#/tareas" ng-click="$emit('MyEvent')">Volver</a>
+    <h1 class="title title-custom">{{tarea.titulo}}</h1>
+</header>
+
+<div class="content">
+	<ul class="list">
+	  <li class="list-divider">Titulo</li>
+	  <li>{{tarea.titulo}}</li>
+	  <li class="list-divider">Descripción corta</li>
+	  <li>{{tarea.desccorta}}</li>
+	  <li class="list-divider">Descripción larga</li>
+	  <li>{{tarea.desclarga}}</li>
+	</ul>
+	<button class="button" ng-click="deletetarea()">Borrar</button>
+</div>

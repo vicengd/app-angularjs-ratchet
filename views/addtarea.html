@@ -1,0 +1,22 @@
+<header class="bar-title" id="cabecera">
+<a class="button-prev" href="#/tareas" data-transition="slide-out">Volver</a><h1 class="title">Agregar tarea</h1>
+</header>
+<div class="content" >
+  <form>
+    <div class="input-group">
+      <div class="input-row">
+        <label>Tarea</label>
+        <input type="text" placeholder="Tarea..." ng-model="tarea.titulo">
+      </div>
+      <div class="input-row">
+        <label>Des. corta</label>
+        <input type="text" placeholder="Descripción corta..." ng-model="tarea.desccorta">
+      </div>
+      <div class="input-row">
+        <label>Des. larga</label>
+        <textarea rows="3" placeholder="Descripción larga..." ng-model="tarea.desclarga"></textarea>
+      </div>
+    </div>
+    <button class="button-positive" ng-click="addtarea()">Agregar</button>
+  </form>
+</div>

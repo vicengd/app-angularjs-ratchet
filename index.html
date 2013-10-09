@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>Tareas</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Solo para iOS-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- /Solo para iOS-->
+
+    <!--iPhone and iPad Apple Touch Icons -->
+    <!-- iPhone Non-Retina -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/touch-icons/apple-touch-icon-57x57v2.png">
+    <!-- iPhone Retina -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch-icons/apple-touch-icon-114x114v2.png">
+
+    <!-- iPad Non-Retina -->
+    <link rel="apple-touch-icon-precomposed" href="img/touch-icons/apple-touch-icon-72x72.png" sizes="72x72">
+    <!-- iPad Retina -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch-icons/apple-touch-icon-144x144.png">
+
+    <!--iPhone and iPad Web App Startup Images -->
+    <!-- iPhone 3 and 4 Non-Retina -->
+    <link rel="apple-touch-startup-image" media="(device-width: 320px)" href="img/startup/apple-touch-startup-image-320x460.png">
+    <!-- iPhone 4 Retina -->
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" href="img/startup/apple-touch-startup-image-640x920.png">
+    <!-- iPhone 5 Retina -->
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="img/startup/apple-touch-startup-image-640x1096.png">
+
+    <!-- iPad Non-Retina Portrait -->
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (orientation: portrait)" href="img/startup/apple-touch-startup-image-768x1004.png">
+    <!-- iPad Non-Retina Landscape -->
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (orientation: landscape)" href="img/startup/apple-touch-startup-image-748x1024.png">
+    <!-- iPad Retina Portrait -->
+    <link rel="apple-touch-startup-image" media="(device-width: 1536px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="img/startup/apple-touch-startup-image-1536x2008.png">
+    <!-- iPad Retina Landscape -->
+    <link rel="apple-touch-startup-image" media="(device-width: 1536px)  and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="img/startup/apple-touch-startup-image-2048x1496.png">
+
+    <link rel="stylesheet" href="css/ratchet.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/snap.css">
+  </head>
+  <body>
+
+  <!-- MENU IZQUIERDO -->
+  <div class="snap-drawers" id="menu" style="display:none" >
+    <div class="snap-drawer snap-drawer-left" id="left-drawer">
+      <ul class="list">
+        <li><a href="#/tarea/sobre" data-ignore="push">Sobre esta app</a></li>
+        <li><a href="#/tarea/conf" data-ignore="push">Configuración</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- /MENU IZQUIERDO -->
+
+  <div id="content" class="snap-content">
+    <!-- MENU -->
+    <nav class="bar-tab">
+      <ul class="tab-inner">
+        <li class="tab-item active">
+          <a href="#/tarea/conf">
+            <img class="tab-icon" src="img/icon-settings.png">
+            <div class="tab-label">Configuración</div>
+          </a>
+        </li>
+        <li class="tab-item">
+          <a href="#/tarea/sobre">
+            <img class="tab-icon" src="img/icon-profile.png">
+            <div class="tab-label">Sobre esta app</div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /MENU -->
+
+    <!-- CONTENIDO -->
+    <div ng-view ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}"></div>
+    <!-- /CONTENIDO -->
+  </div>
+
+  <script src="js/snap.min.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/app.js"></script>
+  </body>
+</html>
